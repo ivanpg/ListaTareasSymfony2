@@ -1,0 +1,7 @@
+parameters:
+#    tarea_listado.example.class: Tarea\ListadoBundle\Example
+
+services:
+#    tarea_listado.example:
+#        class: %tarea_listado.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

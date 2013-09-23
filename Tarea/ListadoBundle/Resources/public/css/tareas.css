@@ -1,0 +1,85 @@
+#tareas{
+    margin: 20px 0;
+}
+
+#lista{
+    background-color: #FFFDC9;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+ul{
+    width: 100%;
+}
+
+ul li{
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.sep{
+    border-bottom: 1px solid #DEB85F;
+    clear: both;
+}
+
+.alta{
+    background: #ca5b59;
+}
+
+.media{
+    background: #4a97bd;
+}
+.baja{
+    background: #bbb;
+}
+
+.prioridad, .editar,.fecha,.descrip
+{
+    float:left;
+}
+
+.prioridad,.editar{
+    width: 80px;
+    text-align: center;
+}
+.editar a{
+    color:#666;
+}
+.editar a:hover{
+    text-decoration: underline;
+}
+
+.fecha{
+    width: 100px;
+    color: #aaa;
+}
+
+.realizada{
+    text-decoration: line-through;
+}
+
+.descrip
+{
+    width: 500px;
+}
+
+.borrar{
+    width: 15px;
+    float: right;
+}
+
+.editar, .fecha, .descrip,.borrar{
+    margin-top:5px;
+}
+
+.prioridad span{
+    font-weight: bolder;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: capitalize;
+    display: block;
+    width: 50px !important;
+    margin-left: 15px;
+}
+

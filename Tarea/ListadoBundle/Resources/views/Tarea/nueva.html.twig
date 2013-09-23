@@ -1,0 +1,58 @@
+{% extends 'TareaListadoBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+<link rel="stylesheet" href="{{ asset('bundles/tarealistado/css/nueva.css') }}" type="text/css" media="all" />
+{% endblock %}
+{% block content %}
+    <div id="form_container">
+        <div id="titulo">
+            <span>Nueva Tarea</span>
+        </div>
+        <form action="{{ path('insertar') }}" method="post" {{ form_enctype(form) }}>
+            {% include 'TareaListadoBundle:Tarea:form.html.twig' with { 'form': form} %}
+            {# opcion 1 
+            {{ form_errors(form) }}
+            {{ form_row(form.descripcion) }}
+            {{ form_row(form.fechaRealizar) }}
+            {{ form_rest(form) }}
+            #}
+
+            {#opcion 2 
+            {{ form_errors(form) }}
+            {{ form_widget(form) }}
+            #}
+
+            {#opcion 3 #}
+            {#<div>
+                {{ form_label(form.descripcion,'Descripción de la tarea') }}
+                <span class="error">{{ form_errors(form.descripcion) }}</span>
+                {{ form_widget(form.descripcion) }}
+            </div>
+
+            <div>
+                {{ form_label(form.fechaRealizar,'Fecha límite') }}
+                 <span class="error">{{ form_errors(form.fechaRealizar) }}</span>
+                {{ form_widget(form.fechaRealizar) }}
+            </div>
+                
+            <div>
+                {{ form_label(form.estado,'Tarea completada') }}
+                 <span class="error">{{ form_errors(form.estado) }}</span>
+                {{ form_widget(form.estado) }}
+            </div>
+
+            <div>
+                {{ form_label(form.prioridad,'Prioridad de la tarea') }}
+                 <span class="error">{{ form_errors(form.prioridad) }}</span>
+                {{ form_widget(form.prioridad) }}
+            </div>
+            {{form_rest(form)}}
+            <div>
+                <input type="submit" value="Enviar">
+            </div>#}
+
+        </form>
+    </div>
+    
+{% endblock %}

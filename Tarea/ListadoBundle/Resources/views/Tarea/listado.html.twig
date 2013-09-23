@@ -1,0 +1,40 @@
+{% extends 'TareaListadoBundle::layout.html.twig' %}
+ 
+{% block stylesheets %}
+  {{ parent() }}
+  <link rel="stylesheet" href="{{ asset('bundles/tarealistado/css/tareas.css') }}" type="text/css" media="all" />
+{% endblock %}
+{% block content %}
+    <div id="tareas">     
+        <div id="titulo">
+            <span>Tareas</span>
+            <a href="{{ path('insertar') }}"><img src="{{ asset('bundles/tarealistado/images/plus.png') }}" alt="añadir tarea"/> Inserta Tarea</a>
+             <a href=""><img src="{{ asset('bundles/tarealistado/images/plus.png') }}" alt="añadir grupo tareas"/> Inserta Grupo</a>
+        </div>
+        <div id="lista">
+        {% for tarea in tareas %}
+          <ul>
+            <li class="prioridad">
+                {% if tarea.prioridad == 'alta' %}
+                    <span class="alta">{{tarea.prioridad}}</span>   
+                {% elseif tarea.prioridad == 'media' %}
+                    <span class="media">{{tarea.prioridad}}</span>   
+                {% elseif tarea.prioridad == 'baja' %}
+                    <span class="baja">{{tarea.prioridad}}</span>   
+                {% endif %}
+                 
+            </li>  
+            <li class="editar"><a href="{{ path('editar',{ 'idTarea' : tarea.id }) }}">[Editar]</a></li>  
+            <li class="fecha">{{ tarea.fechaRealizar |date('j F, Y') }}</li>
+            {% if tarea.estado == true %}
+                <li class="descrip realizada">{{ tarea.descripcion }}</li> 
+            {% else %}
+                <li class="descrip">{{ tarea.descripcion }}</li> 
+            {%endif%}
+            <li class="borrar"><a href="{{ path('eliminar',{ 'idTarea' : tarea.id }) }}">x<a></li> 
+          </ul>
+          <div class="sep"></div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

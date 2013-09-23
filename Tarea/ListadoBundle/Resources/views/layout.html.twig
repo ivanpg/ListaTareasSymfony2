@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% block title %}
+        Tasker
+      {% endblock %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {% block stylesheets %}
+      <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+      <script src="{{ asset('bundles/tarealistado/js/jquery.js') }}"></script>
+      <script src="{{ asset('bundles/tarealistado/js/jquery-ui.js') }}"></script>
+      <link rel="stylesheet" href="{{ asset('bundles/tarealistado/css/main.css') }}" type="text/css"/>
+    {% endblock %}
+    {% block javascripts %}
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ asset('bundles/tarealistado/images/favicon.ico') }}" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div class="content">
+          <h1><a href="{{ path('homepage') }}">
+            Tasker: gestor de tareas
+          </a></h1>
+        </div>
+      </div>
+ 
+      <div id="container">
+        <div class="content">
+            {% if app.session.FlashBag('notice') %}
+              <div class="flash_notice">
+                  <span>{{ app.session.flash('notice') }}</span>
+              </div>
+            {% endif %}
+
+            {% if app.session.FlashBag('error') %}
+              <div class="flash_error">
+                <span>{{ app.session.flash('error') }}</span>
+              </div>
+            {% endif %}
+            {% block content %}
+            {% endblock %}
+        </div>
+      </div>
+ 
+      <div id="footer">
+        <div class="content">
+          <!--<ul>
+            <li><a href="">Sobre Tasker</a></li>
+          </ul>-->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+#form_container{
+    margin:20px 0;
+}
+
+#form_container form{
+    background-color: #eee;
+    border-radius: 0px 0px 5px 5px;
+    padding:15px
+}
+
+label{
+    color:#444;
+}
+
+select{
+    padding: 0 20px;
+}
+
+#Tarea_descripcion{
+    width: 500px; 
+    height: 100px;
+}
+
+#Tarea_descripcion, #Tarea_fechaRealizar, #Tarea_prioridad{
+    display: block;
+    margin: 10px 0 20px 0;
+}
+
+#Tarea_estado{
+    margin: 0px 0 20px 0;
+}
+
+
+
+input[type="submit"]{
+    margin-top: 20px;
+    padding: 5px 10px;
+    background:  #2daebf;
+    border-radius: 5px;
+    border:0px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{background-color:#513f33;}
+
+span.error{
+    color: red;
+    font-weight: bolder;
+}

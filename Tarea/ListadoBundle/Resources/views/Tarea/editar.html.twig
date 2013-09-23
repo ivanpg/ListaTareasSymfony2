@@ -1,0 +1,19 @@
+{% extends 'TareaListadoBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+<link rel="stylesheet" href="{{ asset('bundles/tarealistado/css/nueva.css') }}" type="text/css" media="all" />
+{% endblock %}
+{% block content %}
+    <div id="form_container">
+        <div id="titulo">
+            <span>Edición de Tarea</span>
+            <a href="{{ path('eliminar',{ 'idTarea' : tarea.id }) }}"><img src="{{ asset('bundles/tarealistado/images/delete.png') }}" alt="borrar tarea"/> Eliminar Tarea</a>
+        </div>
+        <form action="{{ path('editar',{ 'idTarea' : tarea.id }) }}" method="post" {{ form_enctype(form) }}>
+             {% include 'TareaListadoBundle:Tarea:form.html.twig' with { 'form': form} %}
+        </form>
+    </div>
+    
+{% endblock %}
+

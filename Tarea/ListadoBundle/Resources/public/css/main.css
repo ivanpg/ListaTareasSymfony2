@@ -1,0 +1,83 @@
+/*
+Reset CSS
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;outline: none;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+
+h1{
+    font-family: 'Irish Grover', cursive; 
+    font-size: 68px; 
+}
+a
+{
+    color: #524F46;
+    outline: none;
+    text-decoration: none;
+}
+
+body
+{
+    font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+    background-color: #E0D6D6;
+}
+
+#header h1{
+    margin-bottom: 20px;
+}
+
+
+#container
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    width: 780px;
+    margin: 0 auto;
+}
+
+#titulo{
+    padding: 6px;
+    padding-left: 15px;
+    background: #8BCFC6 !important;
+    height: 28px;
+    border-bottom: 1px solid #c2c2c2;
+    vertical-align: middle;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+#titulo span{
+    color: #555;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+#titulo a{
+    margin-left: 20px;
+    font-weight: bolder;
+    color:white;
+    border-radius: 5px;
+    text-transform: capitalize;
+    background: #9BDFD8;
+    padding: 5px;
+
+}
+
+
+#titulo a:hover{
+    background: #79BCB6;
+}
+#titulo img{
+    width: 12px;
+}
+
+.flash_notice span{
+    color:#00aa00;
+    font-weight: bolder;
+}

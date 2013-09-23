@@ -1,0 +1,23 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: TareaListadoBundle:Tarea:index }
+    requirements:   { _method: "GET" }
+
+insertar:
+    pattern:  /insertar
+    defaults: { _controller: TareaListadoBundle:Tarea:create }
+    requirements:   { _method: "GET|POST" }
+   
+editar:
+    pattern:  /editar/{idTarea}
+    defaults: { _controller: TareaListadoBundle:Tarea:edit }
+    requirements:   
+        _method: "GET|POST" 
+        tarea_id: \d+
+    
+eliminar:
+    pattern:  /eliminar/{idTarea}
+    defaults: { _controller: TareaListadoBundle:Tarea:delete }
+    requirements:   
+        _method: "GET" 
+        tarea_id: \d+
