@@ -6,6 +6,7 @@ Caraterísticas
 - Uso de plantillas Twig
 - Utilización de repositorio
 - Uso de Fixtures
+- Doctrine 2
 
 Pendiente:
 - Sistema de autenticación de usuarios.
